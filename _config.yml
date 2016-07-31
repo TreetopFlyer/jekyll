@@ -1,6 +1,8 @@
 defaults:
+
 - scope:
     path: ""
     type: "pages"
   values:
    layout: "base"
+   design: "designs/two-column.html"

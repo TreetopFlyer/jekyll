@@ -1,13 +1,18 @@
 ---
 meta:
  title: Home
- keywords: keywerdz
- description: desc
+ keywords: home page keywords
+ description: hoe page description
+
+design: designs/two-column.html
 ---
+
 {% capture SectionMajor%}
     Left column
 {% endcapture %}
+
 {% capture SectionMinor%}
 	Right column
 {% endcapture %}
-{% include designs/two-column.html %}
+
+{% include {{page.design}} %}
