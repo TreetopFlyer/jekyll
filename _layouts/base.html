@@ -1,23 +1,25 @@
-<!DOCTYPE html>
+{% assign env = site.data.environment[jekyll.environment] %}<!DOCTYPE html>
 <html>
     <head>
-        <title>{{site.name}} | {{ page.title }}</title>
-        <meta name="environment" content="{{jekyll.environment}}">
-        <meta property="og:title" content="{{ page.title }}">
-        <meta name="keywords" content="{{ page.keywords }}">
-        <meta name="description" content="{{ page.description }}">
-	    <link rel="canonical" href="{{ page.canonical }}">
-
+        <title>The Site | {{ page.title }}</title>
+        <meta property="environment" content="{{jekyll.environment}}">
+        <meta property="og:title" content="{{ page.meta.title }}">
+        <meta name="keywords" content="{{ page.meta.keywords }}">
+        <meta name="description" content="{{ page.meta.description }}">
+	    <link rel="canonical" href="{{ page.meta.canonical }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Sorts+Mill+Goudy'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-        <link rel="stylesheet" href="{{site.baseurl}}/styles.css">
+        <link rel="stylesheet" href="{{env.siteDirectory}}resources/styles.css">
     </head>
     <body>
+        <script src="{{env.siteDirectory}}resources/js/before.js"></script>
         <div class="container">
-        {{ content }}
+            {{ content }}
         <div>
+        <script src="{{env.siteDirectory}}resources/js/after.js"></script>
     </body>
 </html>

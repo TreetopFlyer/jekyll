@@ -1,4 +1,0 @@
-#jekyll serve --config _config.dev.yml, _config.yml
-
-baseurl: 
-name: Blank Site (Development)

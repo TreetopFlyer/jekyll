@@ -1,2 +1,6 @@
-baseurl: /reponame
-name: Blank Site
+defaults:
+- scope:
+    path: ""
+    type: "pages"
+  values:
+   layout: "base"
