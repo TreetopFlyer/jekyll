@@ -1,5 +1,0 @@
-production:
- siteDirectory: "/reponame/"
-
-development:
- siteDirectory: "/"

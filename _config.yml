@@ -1,8 +1,9 @@
+exclude: [launch.bat]
+directory: "/jekyll"
 defaults:
-
-- scope:
-    path: ""
-    type: "pages"
-  values:
-   layout: "base"
-   design: "designs/two-column.html"
+ - scope:
+     path: ""
+     type: "pages"
+   values:
+    layout: "base"
+    design: "designs/two-column.html"
